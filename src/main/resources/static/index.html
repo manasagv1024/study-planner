@@ -121,7 +121,7 @@ text-align:center;
 
 function loadTasks(){
 
-fetch("http://localhost:8080/tasks")
+fetch("https://study-planner-4-n737.onrender.com")
 
 .then(response => response.json())
 
@@ -188,7 +188,7 @@ return;
 }
 
 
-fetch("http://localhost:8080/tasks",{
+fetch("https://study-planner-4-n737.onrender.com",{
 
 method:"POST",
 
@@ -219,7 +219,7 @@ clearInputs();
 
 }
 function markComplete(id) {
-    fetch(`http://localhost:8080/tasks/${id}`, {
+    fetch(`https://study-planner-4-n737.onrender.com${id}`, {
         method: "PUT"
     })
     .then(() => {
@@ -231,7 +231,7 @@ function markComplete(id) {
 
 function deleteTask(id){
 
-fetch("http://localhost:8080/tasks/"+id,{
+fetch("https://study-planner-4-n737.onrender.com"+id,{
 
 method:"DELETE"
 
