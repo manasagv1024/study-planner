@@ -121,7 +121,7 @@ text-align:center;
 
 function loadTasks(){
 
-fetch("https://study-planner-4-n737.onrender.com")
+fetch("https://study-planner-4-n737.onrender.com/tasks")
 
 .then(response => response.json())
 
@@ -188,7 +188,7 @@ return;
 }
 
 
-fetch("https://study-planner-4-n737.onrender.com",{
+fetch("https://study-planner-4-n737.onrender.com/tasks",{
 
 method:"POST",
 
@@ -219,7 +219,7 @@ clearInputs();
 
 }
 function markComplete(id) {
-    fetch(`https://study-planner-4-n737.onrender.com${id}`, {
+    fetch(`https://study-planner-4-n737.onrender.com/tasks${id}`, {
         method: "PUT"
     })
     .then(() => {
@@ -231,7 +231,7 @@ function markComplete(id) {
 
 function deleteTask(id){
 
-fetch("https://study-planner-4-n737.onrender.com"+id,{
+fetch("https://study-planner-4-n737.onrender.com/tasks"+id,{
 
 method:"DELETE"
 
